@@ -62,7 +62,7 @@ layout: default
             <i class="fa-solid fa-file-pdf"></i>
           </a>
           <p style="margin-top: 25px;">
-            <iframe src="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}" width="800" height="900">
+            <iframe style="position:absolute;" src="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}" width="800" height="900">
           </p>
         {% endif %}
       </h1>
