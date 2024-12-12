@@ -19,6 +19,8 @@ My research focuses on developing robust and interpretable deep learning models 
 
 <!-- Prior to joining Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute. -->
 
+[Download My CV]()
+
 Last Updated: December 2024.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
