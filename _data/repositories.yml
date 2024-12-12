@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - chengstark
 
-repo_description_lines_max: 2
+repo_description_lines_max: 10
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - chengstark/ProtoPMed-EEG
+  - chengstark/SiamAF
+  - chengstark/Segade
+  - chengstark/Segade-Annotation-Tool
