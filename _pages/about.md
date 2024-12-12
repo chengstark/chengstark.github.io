@@ -13,7 +13,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I’m a third-year Ph.D. student in the Department of Electrical and Computer Engineering at Duke University, under supervision of Professor [Cynthia Rudin](https://users.cs.duke.edu/~cynthia/). 
+I’m a third-year Ph.D. student in the Department of Electrical and Computer Engineering at Duke University, under supervision of Professor [Cynthia Rudin](https://users.cs.duke.edu/~cynthia/). Before Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute.
 
 My research focuses on developing robust and interpretable deep learning models for high-stakes applications such as disease detection and diagnostics. I aim to advance the transparency and reliability of deep learning algorithms. 
 
