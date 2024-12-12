@@ -13,7 +13,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I’m a third-year Ph.D. student in the Department of Electrical and Computer Engineering at Duke University, under supervision of Prof. Cynthia Rudin. 
+I’m a third-year Ph.D. student in the Department of Electrical and Computer Engineering at Duke University, under supervision of Professor [Cynthia Rudin](https://users.cs.duke.edu/~cynthia/). 
 
 My research focuses on developing robust and interpretable deep learning models for high-stakes applications such as disease detection and diagnostics. I aim to advance the transparency and reliability of deep learning algorithms. 
 
@@ -21,7 +21,7 @@ My research focuses on developing robust and interpretable deep learning models 
 
 <!-- [Download My CV]() -->
 
-Last Updated: December 2024.
+<!-- Last Updated: December 2024. -->
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
