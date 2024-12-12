@@ -19,7 +19,7 @@ My research focuses on developing robust and interpretable deep learning models 
 
 <!-- Prior to joining Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute. -->
 
-[Download My CV]()
+<!-- [Download My CV]() -->
 
 Last Updated: December 2024.
 
