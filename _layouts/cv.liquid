@@ -61,15 +61,23 @@ layout: default
           >
             <i class="fa-solid fa-file-pdf"></i>
           </a>
-          <p style="margin-top: 25px;">
-            <iframe style="position:absolute;" src="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}" width="800" height="900">
-          </p>
         {% endif %}
       </h1>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
     </header>
+
+    {% if page.cv_pdf %}
+      <div style="margin-top: 25px;">
+        <iframe 
+          src="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}" 
+          width="800" 
+          height="900"
+          style="border: none;">
+        </iframe>
+      </div>
+    {% endif %}
   
   </div>
 {% endunless %}
