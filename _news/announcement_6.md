@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Hurray! Our *"What is Different Between These Datasets?" A Framework for Explaining Data Distribution Shifts* is accpeted at JMLR!
+Hurray! Our *"What is Different Between These Datasets?" A Framework for Explaining Data Distribution Shifts* is accepted at JMLR!
