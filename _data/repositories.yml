@@ -5,6 +5,6 @@ repo_description_lines_max: 10
 
 github_repos:
   - chengstark/ProtoPMed-EEG
+  - chengstark/Interpretable-Dataset-Difference-Explanation
   - chengstark/SiamAF
   - chengstark/Segade
-  - chengstark/Segade-Annotation-Tool
