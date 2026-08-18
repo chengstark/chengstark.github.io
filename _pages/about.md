@@ -13,9 +13,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I’m a fourth-year Ph.D. student in the Department of Electrical and Computer Engineering at Duke University, under supervision of Professor [Cynthia Rudin](https://users.cs.duke.edu/~cynthia/). Before Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute.
+I’m a postdoctoral researcher at Duke University working with Professor [Cynthia Rudin](https://users.cs.duke.edu/~cynthia/). I received my Ph.D. in Electrical and Computer Engineering from Duke in 2026 and my B.Sc. in Computer Science from Rensselaer Polytechnic Institute.
 
-My research focuses on developing robust and interpretable deep learning models for high-stakes applications such as disease detection and diagnostics. I aim to advance the transparency and reliability of deep learning algorithms. 
+My research develops foundation models and interpretable AI for multimodal health data, including wearable physiological signals and medical imaging. I work across representation learning, multimodal modeling, large-scale evaluation, and human-interpretable methods for high-stakes health applications.
+
+Currently, I am developing foundation models for mammography and lung cancer risk prediction, along with methods that uncover interpretable concepts in learned representations and evaluate their predictive and scientific utility.
 
 <!-- Prior to joining Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute. -->
 

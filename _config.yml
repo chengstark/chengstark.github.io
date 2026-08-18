@@ -3,14 +3,15 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Stark
-middle_name: / Zhicheng
+first_name: Zhicheng
+middle_name: (Stark)
 last_name: Guo
-email: zhicheng.guo@duke.edu
+email: zg78@duke.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
+  Machine learning researcher developing foundation models and interpretable AI for multimodal health data, wearable physiological signals, and medical imaging.
 footer_text: >
   Stark's page, thanks for visiting!
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: machine learning, interpretable AI, foundation models, medical AI, multimodal health data # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -75,7 +76,7 @@ dblp_url: # your DBLP profile url
 discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
 flickr_id: # your flickr id
-github_username: # your GitHub user name
+github_username: chengstark # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 inspirehep_id:  # Inspire HEP author ID

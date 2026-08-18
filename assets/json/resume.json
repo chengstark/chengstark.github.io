@@ -1,12 +1,12 @@
 {
     "basics": {
-        "name": "Zhicheng Guo",
-        "label": "Ph.D. Candidate in Electrical and Computer Engineering",
+        "name": "Zhicheng (Stark) Guo",
+        "label": "Postdoctoral Researcher in Machine Learning and Interpretable AI",
         "image": "",
-        "email": "zhicheng.guo@duke.edu",
+        "email": "zg78@duke.edu",
         "phone": "347-720-8974",
         "url": "https://scholar.google.com/citations?user=3J683FMAAAAJ&hl=en",
-        "summary": "Ph.D. candidate at Duke University with expertise in machine learning, medical informatics, and interpretable AI, focusing on improving healthcare outcomes through innovative computational methods.",
+        "summary": "Machine learning researcher developing foundation models and interpretable AI for multimodal health data, including wearable physiological signals and medical imaging.",
         "location": {
             "address": "",
             "postalCode": "",
@@ -16,6 +16,11 @@
         },
         "profiles": [
             {
+                "network": "GitHub",
+                "username": "chengstark",
+                "url": "https://github.com/chengstark"
+            },
+            {
                 "network": "Google Scholar",
                 "username": "ZhichengGuo",
                 "url": "https://scholar.google.com/citations?user=3J683FMAAAAJ&hl=en"
@@ -23,6 +28,30 @@
         ]
     },
     "work": [
+        {
+            "name": "Duke University",
+            "position": "Postdoctoral Researcher",
+            "url": "https://duke.edu",
+            "startDate": "2026-07-01",
+            "endDate": "Present",
+            "summary": "Developing foundation models and interpretable concepts for large-scale medical imaging, including mammography and lung cancer risk prediction.",
+            "highlights": [
+                "Build large-scale data-processing, model-training, and evaluation pipelines for reproducible medical-AI research.",
+                "Evaluate the predictive and scientific utility of concepts extracted from foundation-model representations."
+            ]
+        },
+        {
+            "name": "Texas Instruments, Kilby Labs",
+            "position": "Machine Learning Research Intern",
+            "url": "https://www.ti.com",
+            "startDate": "2025-05-01",
+            "endDate": "2025-08-01",
+            "summary": "Developed an LLM-agentic optimization framework for hardware-constrained neural architecture search and mixed-precision quantization on edge hardware.",
+            "highlights": [
+                "Implemented multi-objective rewards and on-the-fly hardware profiling.",
+                "Developed specialized small reasoning language model groups using GRPO and fine-tuning for data-secure on-site inference."
+            ]
+        },
         {
             "name": "Duke University Health System",
             "position": "Quantitative Research Intern",
@@ -45,7 +74,7 @@
             "area": "Electrical and Computer Engineering",
             "studyType": "Ph.D.",
             "startDate": "2022-01-01",
-            "endDate": "Present",
+            "endDate": "2026-05-01",
             "score": "",
             "courses": []
         },
@@ -75,6 +104,42 @@
     "awards": [],
     "certificates": [],
     "publications": [
+        {
+            "name": "Data-Hugging Shields Proprietary AI Models from Research That Could Disprove Them",
+            "publisher": "npj Artificial Intelligence",
+            "releaseDate": 2026,
+            "url": ""
+        },
+        {
+            "name": "ProtoCDisco: Unsupervised Concept Discovery Using Pretrained Representations",
+            "publisher": "Submitted to NeurIPS",
+            "releaseDate": 2026,
+            "url": ""
+        },
+        {
+            "name": "Cosine Similarity Is Almost All You Need (for Prototypical-Part Models)",
+            "publisher": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+            "releaseDate": 2026,
+            "url": "https://openaccess.thecvf.com/content/WACV2026/html/Moffett_Cosine_Similarity_is_Almost_All_You_Need_for_Prototypical-Part_Models_WACV_2026_paper.html"
+        },
+        {
+            "name": "It's LIT! Reliability-Optimized LLMs with Inspectable Tools",
+            "publisher": "MTI-LLM Workshop at NeurIPS",
+            "releaseDate": 2025,
+            "url": "https://arxiv.org/abs/2511.14903"
+        },
+        {
+            "name": "Rashomon Sets for Prototypical-Part Networks: Editing Interpretable Models in Real-Time",
+            "publisher": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+            "releaseDate": 2025,
+            "url": ""
+        },
+        {
+            "name": "This Looks Better than That: Better Interpretable Models with ProtoPNeXt",
+            "publisher": "arXiv",
+            "releaseDate": 2024,
+            "url": "https://arxiv.org/abs/2406.14675"
+        },
         {
             "name": "A supervised machine learning semantic segmentation approach for detecting artifacts in plethysmography signals from wearables",
             "publisher": "Physiological Measurement",
@@ -106,10 +171,10 @@
             "url": "https://iopscience.iop.org/article/10.1088/1361-6579/ad6747/meta"
         },
         {
-            "name": "What is different between these datasets?",
-            "releaseDate": 2024,
-            "publisher": "On Going",
-            "url": "https://arxiv.org/abs/2403.05652"
+            "name": "What Is Different Between These Datasets? A Framework for Explaining Data Distribution Shifts",
+            "releaseDate": 2025,
+            "publisher": "Journal of Machine Learning Research",
+            "url": "https://jmlr.org/papers/v26/24-0352.html"
         },
         {
             "name": "Integrated Single-cell Multiomic Analysis of HIV Latency Reversal Reveals Novel Regulators of Viral Reactivation",
@@ -118,46 +183,53 @@
             "url": "https://academic.oup.com/gpb/article/22/1/qzae003/7515255"
         },
         {
-            "name": "SiamAF: Learning Shared Information from ECG and PPG Signals for Robust Atrial Fibrillation Detection",
+            "name": "Improving Atrial Fibrillation Detection Using a Shared Latent Space for ECG and PPG Signals",
             "author": "Zhicheng Guo",
-            "publisher": "On Going",
+            "publisher": "Harvard Data Science Review",
+            "releaseDate": 2025,
+            "url": "https://hdsr.mitpress.mit.edu/pub/vifgdvlv/release/1"
+        },
+        {
+            "name": "Reconsideration on Evaluation of Machine Learning Models in Continuous Monitoring Using Wearables",
+            "publisher": "arXiv",
             "releaseDate": 2023,
-            "url": "https://arxiv.org/abs/2310.09203"
+            "url": "https://arxiv.org/abs/2312.02300"
         }
     ],
     "skills": [
         {
-            "name": "Programming",
+            "name": "Languages",
             "level": "",
             "icon": "",
             "keywords": [
-                "Python",
-                "C/C++",
-                "Java",
-                "HTML",
-                "CSS"
+                "Python"
             ]
         },
         {
-            "name": "Machine Learning Frameworks",
+            "name": "Frameworks and Training",
             "level": "",
             "icon": "",
             "keywords": [
                 "PyTorch",
-                "Hugging Face",
-                "TensorFlow"
+                "GPU and distributed training on accelerators"
             ]
         },
         {
-            "name": "Data Tools",
+            "name": "Models and Methods",
             "level": "",
             "icon": "",
             "keywords": [
-                "NumPy",
-                "Matplotlib",
-                "Pandas",
-                "Slurm",
-                "SQLite"
+                "Foundation models",
+                "Vision Transformers",
+                "ConvNets",
+                "Prototypical-part networks",
+                "LLMs and small language models",
+                "Representation learning",
+                "Multimodal learning",
+                "Interpretable-by-design machine learning",
+                "Reinforcement learning (GRPO)",
+                "Neural architecture search",
+                "Quantization"
             ]
         }
     ],

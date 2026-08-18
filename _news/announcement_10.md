@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Back from Texas Instruments!
+Wrapped up my machine learning research internship at Texas Instruments Kilby Labs!
