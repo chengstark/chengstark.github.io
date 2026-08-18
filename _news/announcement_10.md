@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Back from Texas Instruements!
+Back from Texas Instruments!
