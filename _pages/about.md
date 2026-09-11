@@ -15,9 +15,9 @@ social: true # includes social icons at the bottom of the page
 
 I’m a postdoctoral researcher at Duke University working with Professor [Cynthia Rudin](https://users.cs.duke.edu/~cynthia/). I received my Ph.D. in Electrical and Computer Engineering from Duke in 2026 and my B.Sc. in Computer Science from Rensselaer Polytechnic Institute.
 
-My research develops foundation models and interpretable AI for multimodal health data, including wearable physiological signals and medical imaging. I work across representation learning, multimodal modeling, large-scale evaluation, and human-interpretable methods for high-stakes health applications.
+My research develops machine learning methods that turn the rich representations learned by foundation models into general, reusable, and human-understandable concepts for scientific discovery, prediction, and expert reasoning. This work lies at the intersection of scientific discovery, foundation models, and interpretable machine learning.
 
-Currently, I am developing foundation models for mammography and lung cancer risk prediction, along with methods that uncover interpretable concepts in learned representations and evaluate their predictive and scientific utility.
+Currently, I am developing unsupervised concept-discovery methods and an interpretable lexicon of mammographic textures for breast cancer risk prediction. More broadly, I have applied interpretable representation learning to biomedical imaging, critical-care EEG, and wearable cardiac monitoring, with work published in NEJM AI, Nature Machine Intelligence, JMLR, CVPR, and Harvard Data Science Review.
 
 <!-- Prior to joining Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute. -->
 
