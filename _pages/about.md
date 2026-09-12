@@ -17,7 +17,7 @@ I’m a postdoctoral researcher at Duke University working with Professor [Cynth
 
 My research develops machine learning methods that turn the rich representations learned by foundation models into general, reusable, and human-understandable concepts for scientific discovery, prediction, and expert reasoning. This work lies at the intersection of scientific discovery, foundation models, and interpretable machine learning.
 
-Currently, I am developing unsupervised concept-discovery methods and an interpretable lexicon of mammographic textures for breast cancer risk prediction. More broadly, I have applied interpretable representation learning to biomedical imaging, critical-care EEG, and wearable cardiac monitoring, with work published in NEJM AI, Nature Machine Intelligence, JMLR, CVPR, and Harvard Data Science Review.
+Currently, I am developing unsupervised concept-discovery methods and an interpretable lexicon of mammographic textures for breast cancer risk prediction. Across critical-care EEG and wearable cardiac monitoring, my work has provided the first data-driven support for the ictal-interictal-injury continuum (IIIC) and uncovered a shared manifold across ECG and PPG signals that improves atrial-fibrillation detection. My work has appeared in NEJM AI, Nature Machine Intelligence, JMLR, CVPR, and Harvard Data Science Review.
 
 <!-- Prior to joining Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute. -->
 

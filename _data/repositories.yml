@@ -1,10 +1,13 @@
-github_users:
-  - chengstark
-
-repo_description_lines_max: 10
-
 github_repos:
-  - chengstark/ProtoPMed-EEG
-  - chengstark/Interpretable-Dataset-Difference-Explanation
-  - chengstark/SiamAF
-  - chengstark/Segade
+  - repository: chengstark/ProtoPMed-EEG
+    name: ProtoPMed-EEG
+    description: Interpretable prototype-based EEG classification for patterns on the ictal-interictal-injury continuum.
+  - repository: chengstark/Interpretable-Dataset-Difference-Explanation
+    name: Interpretable Dataset Difference Explanation
+    description: Code and experiments for explaining distribution shifts across tabular data, language, images, and signals.
+  - repository: chengstark/SiamAF
+    name: SiamAF
+    description: Learning shared information from ECG and PPG signals for robust atrial-fibrillation detection.
+  - repository: chengstark/Segade
+    name: Segade
+    description: Semantic segmentation for detecting artifacts in photoplethysmography signals from wearable devices.
