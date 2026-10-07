@@ -65,6 +65,8 @@
       {% endif %}
       {% if include.title %}
         title="{{ include.title }}"
+      {% elsif include.zoomable %}
+        title="Click to enlarge"
       {% endif %}
       {% if include.zoomable %}
         data-zoomable
