@@ -157,6 +157,7 @@
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
+    {% comment %}Reset date fields so values cannot carry over from the previous bibliography entry.{% endcomment %}
     {% assign entrymonth = '' %}
     {% assign entryyear = '' %}
     {% if entry.month %}

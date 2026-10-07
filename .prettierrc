@@ -2,3 +2,7 @@ plugins: ["@shopify/prettier-plugin-liquid"]
 printWidth: 150
 trailingComma: "es5"
 endOfLine: auto
+overrides:
+  - files: "_layouts/bib.liquid"
+    options:
+      endOfLine: crlf
