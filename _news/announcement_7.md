@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-02-26 00:00:00-0000
+date: 2025-02-26
 inline: true
 related_posts: false
 ---
 
-Our *Rashomon Sets for Prototypical-Part Models: Editing Accurate Interpretable Models in Real-Time* is published at CVPR!
+Our paper _Rashomon Sets for Prototypical-Part Models: Editing Accurate Interpretable Models in Real-Time_ was accepted by CVPR!

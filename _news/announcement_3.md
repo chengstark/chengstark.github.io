@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-09-18 00:00:00-0000
+date: 2024-09-18
 inline: true
 related_posts: false
 ---
 
-My paper *Sparse learned kernels for interpretable and efficient medical time series processing* is published at Nature Machine Intelligence !
+My paper _Sparse learned kernels for interpretable and efficient medical time series processing_ was published in Nature Machine Intelligence!

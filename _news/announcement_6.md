@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-02-29 00:00:00-0000
+date: 2025-02-28
 inline: true
 related_posts: false
 ---
 
-Hurray! Our *"What is Different Between These Datasets?" A Framework for Explaining Data Distribution Shifts* is accepted at JMLR!
+Hurray! Our paper _What Is Different Between These Datasets? A Framework for Explaining Data Distribution Shifts_ was accepted by JMLR!

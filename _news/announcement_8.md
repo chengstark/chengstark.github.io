@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-05-14 00:00:00-0000
+date: 2025-05-14
 inline: true
 related_posts: false
 ---
 
-Started my summer internship as a **Machine Learning Researcher at Kilby Labs @ Texas Instrument, Dallas, TX.** I will be working on LLM and Embed AI.
+I started my summer internship as a **machine learning researcher at Kilby Labs, Texas Instruments, in Dallas, Texas.** I will be working on LLMs and embedded AI.

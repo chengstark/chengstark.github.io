@@ -2,14 +2,17 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: please see my past teaching experience below.
+description: Past teaching experience at Duke University.
 nav: true
 nav_order: 6
 ---
 
-Compsci 671D: Graduate Theory and Algorithms for Machine Learning - Fall 2023
+**Fall 2025 — Guest lecturer**, COMPSCI 671D: Theory and Algorithms for Machine Learning
 
-Compsci 671D: Graduate Theory and Algorithms for Machine Learning - Fall 2022
+Lecture topic: neural networks and interpretable neural network design.
 
-Compsci 671D: Graduate Theory and Algorithms for Machine Learning - Fall 2021
+**Fall 2023 — Teaching assistant**, COMPSCI 671D: Theory and Algorithms for Machine Learning
 
+**Fall 2022 — Teaching assistant**, COMPSCI 671D: Theory and Algorithms for Machine Learning
+
+**Fall 2021 — Teaching assistant**, COMPSCI 671D: Theory and Algorithms for Machine Learning
