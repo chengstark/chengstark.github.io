@@ -42,7 +42,10 @@ jobs:
             > /tmp/prettier-files
 
           if [[ -s /tmp/prettier-files ]]; then
-            xargs -0 npx prettier --check -- < /tmp/prettier-files
+            if ! xargs -0 npx prettier --check -- < /tmp/prettier-files; then
+              xargs -0 npx prettier --write -- < /tmp/prettier-files
+              git diff --no-ext-diff --exit-code
+            fi
           else
             echo "No supported files changed."
           fi
