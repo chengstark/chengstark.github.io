@@ -40,6 +40,7 @@ jobs:
           git diff --name-only --diff-filter=ACMR -z "$BASE_SHA" "$HEAD_SHA" -- \
             '*.css' '*.html' '*.js' '*.json' '*.liquid' '*.md' '*.scss' '*.yaml' '*.yml' \
             > /tmp/prettier-files
+          printf '%s\0' '_layouts/bib.liquid' >> /tmp/prettier-files
 
           if [[ -s /tmp/prettier-files ]]; then
             if ! xargs -0 npx prettier --check -- < /tmp/prettier-files; then
