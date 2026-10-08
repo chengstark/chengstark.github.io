@@ -26,8 +26,10 @@
   const adjacency = new Map(data.nodes.map((node) => [node.id, new Set()]));
 
   data.links.forEach((link) => {
-    adjacency.get(link.source)?.add(link.target);
-    adjacency.get(link.target)?.add(link.source);
+    const sourceNeighbors = adjacency.get(link.source);
+    const targetNeighbors = adjacency.get(link.target);
+    if (sourceNeighbors) sourceNeighbors.add(link.target);
+    if (targetNeighbors) targetNeighbors.add(link.source);
   });
 
   let selectedCluster = "all";
@@ -62,7 +64,7 @@
     nodeSelection
       .classed("is-selected", (node) => node.id === selectedNodeId)
       .attr("opacity", (node) => {
-        if (selectedNodeId) return node.id === selectedNodeId || neighbors?.has(node.id) ? 1 : 0.16;
+        if (selectedNodeId) return node.id === selectedNodeId || (neighbors && neighbors.has(node.id)) ? 1 : 0.16;
         if (selectedCluster !== "all") return node.cluster === selectedCluster ? 1 : 0.16;
         return 1;
       });
@@ -73,7 +75,7 @@
 
       if (selectedNodeId) return source === selectedNodeId || target === selectedNodeId ? 1 : 0.08;
       if (selectedCluster !== "all") {
-        return nodeById.get(source)?.cluster === selectedCluster && nodeById.get(target)?.cluster === selectedCluster ? 0.9 : 0.08;
+        return nodeById.get(source).cluster === selectedCluster && nodeById.get(target).cluster === selectedCluster ? 0.9 : 0.08;
       }
       return 1;
     });
@@ -83,7 +85,9 @@
 
   function showDetails(node) {
     const cluster = clusterById.get(node.cluster);
-    const related = [...(adjacency.get(node.id) || [])].map((id) => nodeById.get(id)?.label).filter(Boolean);
+    const related = Array.from(adjacency.get(node.id) || [])
+      .map((id) => nodeById.get(id).label)
+      .filter(Boolean);
 
     details.image.src = imageUrl(node.preview);
     details.image.alt = `Preview for ${node.title}`;
@@ -231,7 +235,7 @@
 
     nodeSelection.call(drag);
 
-    simulation?.stop();
+    if (simulation) simulation.stop();
     simulation = d3
       .forceSimulation(data.nodes)
       .force(
@@ -270,7 +274,7 @@
     zoomBehavior = d3
       .zoom()
       .scaleExtent([0.65, 2.3])
-      .filter((event) => !event.target.closest?.(".research-map__node"))
+      .filter((event) => !(event.target.closest && event.target.closest(".research-map__node")))
       .on("zoom", (event) => rootLayer.attr("transform", event.transform));
 
     svg
