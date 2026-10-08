@@ -175,6 +175,9 @@ links:
   - source: cosine
     target: rashomon
     label: prototype models
+  - source: cosine
+    target: lit
+    label: interpretable AI methods
   - source: mammotexture
     target: eeg
     label: clinical decision support
@@ -226,9 +229,6 @@ links:
   - source: data-hugging
     target: rashomon
     label: clinical model transparency
-  - source: data-hugging
-    target: lit
-    label: transparent AI research
   - source: data-hugging
     target: learning-alarms
     label: wearable model evidence
