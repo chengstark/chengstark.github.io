@@ -1185,8 +1185,9 @@ nav[data-toggle="toc"] {
   }
 
   &__image {
-    width: min(92vw, 1400px);
-    height: 88vh;
+    width: min(66.667vw, 1200px);
+    height: auto;
+    max-height: 88vh;
     object-fit: contain;
     filter: drop-shadow(0 1rem 2.5rem rgb(0 0 0 / 24%));
     cursor: default;
@@ -1217,6 +1218,12 @@ nav[data-toggle="toc"] {
 
 body.publication-lightbox-open {
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .publication-image-lightbox__image {
+    width: 92vw;
+  }
 }
 
 #toc-sidebar {
