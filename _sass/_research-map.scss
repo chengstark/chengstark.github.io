@@ -146,7 +146,6 @@
     transition: opacity 180ms ease;
 
     circle {
-      fill: var(--global-card-bg-color);
       stroke-width: 3;
       transition:
         stroke-width 160ms ease,
