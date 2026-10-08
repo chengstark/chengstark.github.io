@@ -167,9 +167,6 @@ nodes:
 
 links:
   - source: protocdisco
-    target: cosine
-    label: concept-based vision
-  - source: protocdisco
     target: rashomon
     label: interpretable models
   - source: protocdisco
@@ -185,8 +182,14 @@ links:
     target: single-cell
     label: biomedical discovery
   - source: eeg
-    target: siamaf
-    label: clinical signal interpretation
+    target: protocdisco
+    label: interpretable concept discovery
+  - source: eeg
+    target: rashomon
+    label: interpretable clinical models
+  - source: eeg
+    target: dataset-shifts
+    label: clinical dataset understanding
   - source: siamaf
     target: learning-alarms
     label: atrial fibrillation detection
@@ -196,6 +199,12 @@ links:
   - source: siamaf
     target: smolk
     label: medical time series
+  - source: siamaf
+    target: artifact-segmentation
+    label: wearable signal reliability
+  - source: siamaf
+    target: wearable-evaluation
+    label: wearable model evaluation
   - source: learning-alarms
     target: siamquality
     label: PPG learning
@@ -215,14 +224,20 @@ links:
     target: dataset-shifts
     label: model scrutiny
   - source: data-hugging
+    target: rashomon
+    label: clinical model transparency
+  - source: data-hugging
     target: lit
     label: transparent AI research
+  - source: data-hugging
+    target: learning-alarms
+    label: wearable model evidence
+  - source: data-hugging
+    target: smolk
+    label: wearable model scrutiny
+  - source: data-hugging
+    target: siamquality
+    label: wearable foundation models
   - source: dataset-shifts
-    target: lit
-    label: interpretable tools
-  - source: dataset-shifts
-    target: protocdisco
-    label: interpretable patterns
-  - source: lit
-    target: single-cell
-    label: tools for scientific discovery
+    target: rashomon
+    label: robust clinical models
