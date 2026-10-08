@@ -47,14 +47,14 @@
 
   function clusterLayout(width, height) {
     if (width < 640) {
-      return new Map(data.clusters.map((cluster, index) => [cluster.id, { x: width / 2, y: 125 + index * ((height - 190) / 3) }]));
+      const clusterGap = (height - 250) / Math.max(data.clusters.length - 1, 1);
+      return new Map(data.clusters.map((cluster, index) => [cluster.id, { x: width / 2, y: 125 + index * clusterGap }]));
     }
 
     return new Map([
-      ["interpretable-vision", { x: width * 0.27, y: height * 0.28 }],
-      ["clinical-ai", { x: width * 0.73, y: height * 0.28 }],
-      ["wearable-signals", { x: width * 0.27, y: height * 0.73 }],
-      ["understanding-ai", { x: width * 0.73, y: height * 0.73 }],
+      ["wearable-physiological-signals", { x: width * 0.19, y: height * 0.52 }],
+      ["scientific-discovery", { x: width * 0.5, y: height * 0.48 }],
+      ["clinical-ai", { x: width * 0.81, y: height * 0.52 }],
     ]);
   }
 
@@ -157,7 +157,7 @@
       .join("text")
       .attr("class", "research-map__cluster-label")
       .attr("x", (cluster) => centers.get(cluster.id).x)
-      .attr("y", (cluster) => centers.get(cluster.id).y - (width < 640 ? 92 : 122))
+      .attr("y", (cluster) => centers.get(cluster.id).y - (width < 640 ? 100 : 170))
       .text((cluster) => cluster.label);
 
     linkSelection = rootLayer

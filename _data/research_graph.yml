@@ -1,16 +1,13 @@
 clusters:
-  - id: interpretable-vision
-    label: Interpretable vision
+  - id: wearable-physiological-signals
+    label: Wearable physiological signals
+    color: "#10b981"
+  - id: scientific-discovery
+    label: Scientific discovery
     color: "#8b5cf6"
   - id: clinical-ai
     label: Clinical AI
     color: "#0ea5e9"
-  - id: wearable-signals
-    label: Wearable signals
-    color: "#10b981"
-  - id: understanding-ai
-    label: Understanding AI & science
-    color: "#f97316"
 
 nodes:
   - id: protocdisco
@@ -18,7 +15,7 @@ nodes:
     title: "ProtoCDisco: Unsupervised Concept Discovery Using Foundation Model Representations"
     year: 2026
     venue: Manuscript in submission
-    cluster: interpretable-vision
+    cluster: scientific-discovery
     preview: assets/img/publication_preview/protocdisco.png
     featured: true
     summary: Discovers human-readable visual concepts from foundation-model representations without concept labels.
@@ -28,7 +25,7 @@ nodes:
     title: Cosine Similarity Is Almost All You Need (for Prototypical-Part Models)
     year: 2026
     venue: WACV
-    cluster: interpretable-vision
+    cluster: clinical-ai
     preview: assets/img/publication_preview/cosine_similarity.png
     url: https://openaccess.thecvf.com/content/WACV2026/html/Moffett_Cosine_Similarity_is_Almost_All_You_Need_for_Prototypical-Part_Models_WACV_2026_paper.html
     summary: Studies a simpler similarity mechanism for prototypical-part models and their visual explanations.
@@ -38,7 +35,7 @@ nodes:
     title: "Rashomon Sets for Prototypical-Part Networks: Editing Interpretable Models in Real-Time"
     year: 2025
     venue: CVPR
-    cluster: interpretable-vision
+    cluster: clinical-ai
     preview: assets/img/publication_preview/rset_intro.jpg
     url: https://openaccess.thecvf.com/content/CVPR2025/html/Donnelly_Rashomon_Sets_for_Prototypical-Part_Networks_Editing_Interpretable_Models_in_Real-Time_CVPR_2025_paper.html
     summary: Uses collections of similarly accurate prototype models to support real-time, interpretable model editing.
@@ -48,7 +45,7 @@ nodes:
     title: "This Looks Better than That: Better Interpretable Models with ProtoPNeXt"
     year: 2024
     venue: arXiv
-    cluster: interpretable-vision
+    cluster: clinical-ai
     preview: assets/img/publication_preview/protopnext.png
     url: https://arxiv.org/abs/2406.14675
     summary: Improves prototype-based image models while keeping their reasoning visually inspectable.
@@ -58,7 +55,7 @@ nodes:
     title: A Mammographic Texture Lexicon for Interpretable Breast Cancer Risk Prediction
     year: 2026
     venue: Ongoing research
-    cluster: clinical-ai
+    cluster: scientific-discovery
     preview: assets/img/publication_preview/mammographic_texture_lexicon.png
     featured: true
     summary: Builds a radiologist-facing vocabulary of mammographic texture concepts for interpretable breast cancer risk prediction.
@@ -68,7 +65,7 @@ nodes:
     title: Improving Clinician Performance in Classifying EEG Patterns on the Ictal--Interictal Injury Continuum Using Interpretable Machine Learning
     year: 2024
     venue: NEJM AI
-    cluster: clinical-ai
+    cluster: scientific-discovery
     preview: assets/img/publication_preview/protopmed_eeg.png
     featured: true
     url: https://doi.org/10.1056/AIoa2300331
@@ -79,7 +76,7 @@ nodes:
     title: Integrated Single-cell Multiomic Analysis of HIV Latency Reversal Reveals Novel Regulators of Viral Reactivation
     year: 2024
     venue: Genomics, Proteomics & Bioinformatics
-    cluster: clinical-ai
+    cluster: scientific-discovery
     preview: assets/img/publication_preview/single_cell.jpg
     url: https://academic.oup.com/gpb/article/22/1/qzae003/7515255
     summary: Uses integrated single-cell multiomics to identify regulators of HIV latency reversal.
@@ -89,7 +86,7 @@ nodes:
     title: Improving Atrial Fibrillation Detection Using a Shared Latent Space for ECG and PPG Signals
     year: 2025
     venue: Harvard Data Science Review
-    cluster: wearable-signals
+    cluster: scientific-discovery
     preview: assets/img/publication_preview/siam_af.jpg
     featured: true
     url: https://hdsr.mitpress.mit.edu/pub/vifgdvlv/release/1
@@ -100,7 +97,7 @@ nodes:
     title: Learning From Alarms
     year: 2024
     venue: IEEE Journal of Biomedical and Health Informatics
-    cluster: wearable-signals
+    cluster: wearable-physiological-signals
     preview: assets/img/publication_preview/learnalarm.gif
     url: https://doi.org/10.1109/JBHI.2024.3360952
     summary: Learns robust PPG-based atrial fibrillation detection from eight million samples with imprecise alarm labels.
@@ -110,7 +107,7 @@ nodes:
     title: Sparse Learned Kernels for Interpretable and Efficient Medical Time Series Processing
     year: 2024
     venue: Nature Machine Intelligence
-    cluster: wearable-signals
+    cluster: wearable-physiological-signals
     preview: assets/img/publication_preview/smolk.png
     url: https://www.nature.com/articles/s42256-024-00898-4
     summary: Learns sparse, interpretable kernels for efficient medical time-series models.
@@ -120,7 +117,7 @@ nodes:
     title: "SiamQuality: A ConvNet-Based Foundation Model for Photoplethysmography Signals"
     year: 2024
     venue: Physiological Measurement
-    cluster: wearable-signals
+    cluster: wearable-physiological-signals
     preview: assets/img/publication_preview/siam_quality.jpg
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11334241/
     summary: Introduces a foundation model for assessing and representing photoplethysmography signal quality.
@@ -130,7 +127,7 @@ nodes:
     title: A Supervised Machine Learning Semantic Segmentation Approach for Detecting Artifacts in Plethysmography Signals From Wearables
     year: 2021
     venue: Physiological Measurement
-    cluster: wearable-signals
+    cluster: wearable-physiological-signals
     preview: assets/img/publication_preview/segade.png
     url: https://doi.org/10.1088/1361-6579/ac3b3d
     summary: Detects and localizes artifact regions in wearable plethysmography signals with semantic segmentation.
@@ -140,7 +137,7 @@ nodes:
     title: Reconsideration on Evaluation of Machine Learning Models in Continuous Monitoring Using Wearables
     year: 2023
     venue: arXiv
-    cluster: wearable-signals
+    cluster: wearable-physiological-signals
     preview: assets/img/publication_preview/wearables_evaluation.png
     url: https://arxiv.org/abs/2312.02300
     summary: Reconsiders how machine-learning models should be evaluated for continuous wearable monitoring.
@@ -150,7 +147,7 @@ nodes:
     title: Data-Hugging Shields Proprietary AI Models from Research That Could Disprove Them
     year: 2026
     venue: npj Artificial Intelligence
-    cluster: understanding-ai
+    cluster: clinical-ai
     preview: assets/img/publication_preview/datahugging.png
     url: https://www.nature.com/articles/s44387-026-00094-2
     summary: Examines how restricted data access can shield proprietary AI systems from research that could challenge them.
@@ -160,7 +157,7 @@ nodes:
     title: It's LIT! LLMs with Interpretable Tools
     year: 2025
     venue: NeurIPS MTI-LLM Workshop
-    cluster: understanding-ai
+    cluster: scientific-discovery
     preview: assets/img/publication_preview/lit_framework.png
     url: https://arxiv.org/abs/2511.14903
     summary: Pairs language models with interpretable tools for transparent multi-turn problem solving.
@@ -170,7 +167,7 @@ nodes:
     title: '"What Is Different Between These Datasets?" A Framework for Explaining Data Distribution Shifts'
     year: 2025
     venue: Journal of Machine Learning Research
-    cluster: understanding-ai
+    cluster: clinical-ai
     preview: assets/img/publication_preview/dataset_explain.png
     url: https://jmlr.org/papers/v26/24-0352.html
     summary: Explains which interpretable patterns distinguish one dataset from another.
