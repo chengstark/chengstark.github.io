@@ -38,7 +38,17 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="about-intro">
+      <div class="clearfix">{{ content }}</div>
+
+      {% if page.selected_papers %}
+        {% include selected_papers_intro.liquid %}
+      {% endif %}
+    </div>
+
+    {% if page.research_map %}
+      {% include research_map.liquid homepage=true show_publications_link=true %}
+    {% endif %}
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
@@ -46,14 +56,6 @@ layout: default
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Social -->

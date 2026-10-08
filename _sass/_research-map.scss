@@ -36,6 +36,19 @@
     align-items: center;
   }
 
+  &__intro-actions {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0.9rem;
+    align-items: center;
+  }
+
+  &__publications-link {
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
   &__controls {
     flex: 0 0 auto;
     gap: 0.35rem;
@@ -289,6 +302,12 @@
   .research-map {
     &__intro {
       align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &__intro-actions {
+      width: 100%;
+      justify-content: space-between;
     }
 
     &__controls {

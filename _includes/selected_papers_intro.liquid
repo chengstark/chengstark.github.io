@@ -1,0 +1,19 @@
+<section class="about-intro__selected" aria-labelledby="selected-publications-title">
+  <div class="about-intro__selected-heading">
+    <h2 id="selected-publications-title">selected publications</h2>
+    <a href="{{ '/publications/' | relative_url }}">View all <span aria-hidden="true">→</span></a>
+  </div>
+
+  <ol class="about-intro__selected-list">
+    {% for paper in site.data.research_graph.nodes %}
+      {% if paper.featured %}
+        <li>
+          <a href="{{ '/publications/#' | append: paper.publication_key | relative_url }}">
+            <span>{{ paper.title }}</span>
+            <small>{{ paper.venue }}, {{ paper.year }}</small>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</section>

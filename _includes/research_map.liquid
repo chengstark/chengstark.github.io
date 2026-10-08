@@ -1,16 +1,23 @@
-<link rel="stylesheet" href="{{ '/assets/css/research-map-page.css?v=2' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/research-map-page.css' | relative_url | bust_css_cache }}">
 
-<section class="research-map" aria-labelledby="research-map-title">
+<section class="research-map{% if include.homepage %} research-map--homepage{% endif %}" aria-labelledby="research-map-title">
   <div class="research-map__intro">
     <div>
       <p class="research-map__eyebrow">Research map</p>
       <h2 id="research-map-title">How the papers connect</h2>
       <p>Each node is a paper. Select a topic or paper to trace the shared methods and application areas across my research.</p>
     </div>
-    <div class="research-map__controls" aria-label="Graph controls">
-      <button class="research-map__control" type="button" data-map-action="zoom-out" aria-label="Zoom out">−</button>
-      <button class="research-map__control" type="button" data-map-action="reset" aria-label="Reset graph view">Reset</button>
-      <button class="research-map__control" type="button" data-map-action="zoom-in" aria-label="Zoom in">+</button>
+    <div class="research-map__intro-actions">
+      {% if include.show_publications_link %}
+        <a class="research-map__publications-link" href="{{ '/publications/' | relative_url }}">
+          Publications page <span aria-hidden="true">→</span>
+        </a>
+      {% endif %}
+      <div class="research-map__controls" aria-label="Graph controls">
+        <button class="research-map__control" type="button" data-map-action="zoom-out" aria-label="Zoom out">−</button>
+        <button class="research-map__control" type="button" data-map-action="reset" aria-label="Reset graph view">Reset</button>
+        <button class="research-map__control" type="button" data-map-action="zoom-in" aria-label="Zoom in">+</button>
+      </div>
     </div>
   </div>
 
