@@ -61,11 +61,16 @@
 
   function updateEmphasis() {
     const neighbors = selectedNodeId ? adjacency.get(selectedNodeId) : null;
+    const emphasizedNodeIds = selectedNodeId ? new Set([selectedNodeId, ...(neighbors || [])]) : null;
+
+    if (selectedNodeId === "siamaf") {
+      data.nodes.filter((node) => node.cluster === "wearable-physiological-signals").forEach((node) => emphasizedNodeIds.add(node.id));
+    }
 
     nodeSelection
       .classed("is-selected", (node) => node.id === selectedNodeId)
       .attr("opacity", (node) => {
-        if (selectedNodeId) return node.id === selectedNodeId || (neighbors && neighbors.has(node.id)) ? 1 : 0.16;
+        if (selectedNodeId) return emphasizedNodeIds.has(node.id) ? 1 : 0.16;
         if (selectedCluster !== "all") return node.cluster === selectedCluster ? 1 : 0.16;
         return 1;
       });
@@ -74,6 +79,7 @@
       const source = endpointId(link.source);
       const target = endpointId(link.target);
 
+      if (selectedNodeId === "siamaf") return emphasizedNodeIds.has(source) && emphasizedNodeIds.has(target) ? 1 : 0.08;
       if (selectedNodeId) return source === selectedNodeId || target === selectedNodeId ? 1 : 0.08;
       if (selectedCluster !== "all") {
         return nodeById.get(source).cluster === selectedCluster && nodeById.get(target).cluster === selectedCluster ? 0.9 : 0.08;
