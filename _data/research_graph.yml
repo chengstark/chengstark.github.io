@@ -9,7 +9,7 @@ clusters:
     label: Clinical AI
     color: "#0ea5e9"
   - id: interpretable-ai
-    label: Interpretable AI
+    label: Other interp AI methods
     color: "#f97316"
 
 nodes:
@@ -42,16 +42,6 @@ nodes:
     preview: assets/img/publication_preview/rset_intro.jpg
     url: https://openaccess.thecvf.com/content/CVPR2025/html/Donnelly_Rashomon_Sets_for_Prototypical-Part_Networks_Editing_Interpretable_Models_in_Real-Time_CVPR_2025_paper.html
     summary: Uses collections of similarly accurate prototype models to support real-time, interpretable model editing.
-
-  - id: protopnext
-    label: ProtoPNeXt
-    title: "This Looks Better than That: Better Interpretable Models with ProtoPNeXt"
-    year: 2024
-    venue: arXiv
-    cluster: interpretable-ai
-    preview: assets/img/publication_preview/protopnext.png
-    url: https://arxiv.org/abs/2406.14675
-    summary: Improves prototype-based image models while keeping their reasoning visually inspectable.
 
   - id: mammotexture
     label: Mammo texture
@@ -186,17 +176,8 @@ links:
     target: mammotexture
     label: human-readable concepts
   - source: cosine
-    target: protopnext
-    label: prototype similarity
-  - source: cosine
     target: rashomon
     label: prototype models
-  - source: rashomon
-    target: protopnext
-    label: editable prototypes
-  - source: protopnext
-    target: eeg
-    label: interpretable prediction
   - source: mammotexture
     target: eeg
     label: clinical decision support
