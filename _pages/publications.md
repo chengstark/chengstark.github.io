@@ -9,6 +9,10 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
+{% include research_map.liquid %}
+
+## All publications
+
 <!-- Bibsearch Feature -->
 <!-- [My Google Scholar](https://scholar.google.com/citations?user=3J683FMAAAAJ&hl=en) -->
 

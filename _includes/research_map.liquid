@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="{{ '/assets/css/research-map.css' | relative_url | bust_css_cache }}">
+
+<section class="research-map" aria-labelledby="research-map-title">
+  <div class="research-map__intro">
+    <div>
+      <p class="research-map__eyebrow">Research map</p>
+      <h2 id="research-map-title">How the papers connect</h2>
+      <p>Each node is a paper. Select a topic or paper to trace the shared methods and application areas across my research.</p>
+    </div>
+    <div class="research-map__controls" aria-label="Graph controls">
+      <button class="research-map__control" type="button" data-map-action="zoom-out" aria-label="Zoom out">−</button>
+      <button class="research-map__control" type="button" data-map-action="reset" aria-label="Reset graph view">Reset</button>
+      <button class="research-map__control" type="button" data-map-action="zoom-in" aria-label="Zoom in">+</button>
+    </div>
+  </div>
+
+  <div class="research-map__filters" role="group" aria-label="Filter papers by topic">
+    <button class="research-map__filter is-active" type="button" data-cluster="all" aria-pressed="true">All topics</button>
+    {% for cluster in site.data.research_graph.clusters %}
+      <button class="research-map__filter" type="button" data-cluster="{{ cluster.id }}" aria-pressed="false">
+        <span class="research-map__swatch" style="--cluster-color: {{ cluster.color }}" aria-hidden="true"></span>
+        {{ cluster.label }}
+      </button>
+    {% endfor %}
+  </div>
+
+  <div class="research-map__stage" data-baseurl="{{ site.baseurl }}">
+    <svg class="research-map__canvas" role="img" aria-labelledby="research-map-title research-map-description"></svg>
+    <p id="research-map-description" class="sr-only">
+      An interactive network of publications grouped into interpretable vision, clinical AI, wearable signals, and understanding AI and science.
+    </p>
+    <div class="research-map__tooltip" role="status" aria-live="polite"></div>
+  </div>
+
+  <aside class="research-map__details" aria-live="polite">
+    <img class="research-map__details-image" alt="" hidden>
+    <div class="research-map__details-copy">
+      <p class="research-map__details-topic">Explore the map</p>
+      <h3 class="research-map__details-title">Select a paper</h3>
+      <p class="research-map__details-meta">Drag nodes to rearrange them, or pan and zoom the canvas.</p>
+      <p class="research-map__details-summary">Connections represent shared methods, research questions, or application areas.</p>
+      <p class="research-map__details-related" hidden></p>
+      <a class="research-map__paper-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Read paper <span aria-hidden="true">↗</span></a>
+      <span class="research-map__in-progress" hidden>Research in progress</span>
+    </div>
+  </aside>
+
+  <noscript>
+    <p class="research-map__noscript">Enable JavaScript to explore the interactive research map.</p>
+  </noscript>
+</section>
+
+<script id="research-map-data" type="application/json">
+  {{ site.data.research_graph | jsonify }}
+</script>
+<script
+  defer
+  src="{{ site.third_party_libraries.d3.url.js }}"
+  integrity="{{ site.third_party_libraries.d3.integrity.js }}"
+  crossorigin="anonymous"
+></script>
+<script defer src="{{ '/assets/js/research-map.js' | relative_url | bust_file_cache }}"></script>
