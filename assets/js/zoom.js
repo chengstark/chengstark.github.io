@@ -49,7 +49,7 @@ function initializeImageZoom() {
     document.body.classList.remove("publication-lightbox-open");
     enlargedImage.removeAttribute("src");
     enlargedImage.removeAttribute("alt");
-    triggerImage?.focus();
+    if (triggerImage) triggerImage.focus();
     triggerImage = null;
   }
 
