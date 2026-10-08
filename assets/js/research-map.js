@@ -256,7 +256,7 @@
         d3
           .forceLink(data.links)
           .id((node) => node.id)
-          .distance((link) => (nodeById.get(endpointId(link.source)).cluster === nodeById.get(endpointId(link.target)).cluster ? 88 : 145))
+          .distance((link) => (nodeById.get(endpointId(link.source)).cluster === nodeById.get(endpointId(link.target)).cluster ? 80 : 145))
           .strength(0.12)
       )
       .force("charge", d3.forceManyBody().strength(-125))
@@ -264,11 +264,11 @@
         "collide",
         d3
           .forceCollide()
-          .radius((node) => node.radius + 21)
+          .radius((node) => node.radius + 17)
           .iterations(2)
       )
-      .force("x", d3.forceX((node) => centers.get(node.cluster).x).strength(0.19))
-      .force("y", d3.forceY((node) => centers.get(node.cluster).y).strength(0.19))
+      .force("x", d3.forceX((node) => centers.get(node.cluster).x).strength(0.24))
+      .force("y", d3.forceY((node) => centers.get(node.cluster).y).strength(0.24))
       .on("tick", () => {
         linkSelection
           .attr("x1", (link) => link.source.x)
