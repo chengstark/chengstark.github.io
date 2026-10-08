@@ -126,6 +126,10 @@
 
   &__cluster-label {
     fill: var(--global-text-color-light);
+    stroke: var(--global-card-bg-color);
+    stroke-linejoin: round;
+    stroke-width: 5px;
+    paint-order: stroke;
     font-size: 0.71rem;
     font-weight: 700;
     letter-spacing: 0.1em;

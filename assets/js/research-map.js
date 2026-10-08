@@ -158,7 +158,11 @@
       .join("text")
       .attr("class", "research-map__cluster-label")
       .attr("x", (cluster) => centers.get(cluster.id).x)
-      .attr("y", (cluster) => centers.get(cluster.id).y - (width < 640 ? 100 : cluster.id === "interpretable-ai" ? 110 : 170))
+      .attr("y", (cluster) => {
+        if (width < 640) return centers.get(cluster.id).y - 100;
+        if (cluster.id === "interpretable-ai") return height * 0.66;
+        return centers.get(cluster.id).y - 170;
+      })
       .text((cluster) => cluster.label);
 
     linkSelection = rootLayer
@@ -217,6 +221,8 @@
       .attr("y", (node) => node.radius + 16)
       .text((node) => node.label);
 
+    clusterSelection.raise();
+
     const drag = d3
       .drag()
       .on("start", (event, node) => {
@@ -266,6 +272,15 @@
 
         nodeSelection.attr("transform", (node) => {
           const padding = node.radius + 8;
+
+          if (width >= 640) {
+            if (node.cluster === "interpretable-ai") {
+              node.y = Math.max(height * 0.75, node.y);
+            } else {
+              node.y = Math.min(height * 0.56, node.y);
+            }
+          }
+
           node.x = Math.max(padding, Math.min(width - padding, node.x));
           node.y = Math.max(padding, Math.min(height - padding - 18, node.y));
           return `translate(${node.x},${node.y})`;
