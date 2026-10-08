@@ -771,6 +771,20 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+
+        a {
+          color: inherit;
+          text-decoration: underline;
+          text-decoration-color: var(--global-divider-color);
+          text-decoration-thickness: 0.07em;
+          text-underline-offset: 0.13em;
+
+          &:hover,
+          &:focus-visible {
+            color: var(--global-theme-color);
+            text-decoration-color: currentColor;
+          }
+        }
       }
 
       .author {
@@ -1148,6 +1162,61 @@ nav[data-toggle="toc"] {
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
   z-index: 999;
+}
+
+.publication-image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  padding: clamp(0.75rem, 2vw, 2rem);
+  background: color-mix(in srgb, var(--global-bg-color) 92%, transparent);
+  cursor: zoom-out;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 180ms ease,
+    visibility 180ms ease;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__image {
+    width: min(92vw, 1400px);
+    height: 88vh;
+    object-fit: contain;
+    filter: drop-shadow(0 1rem 2.5rem rgb(0 0 0 / 24%));
+    cursor: default;
+  }
+
+  &__close {
+    position: absolute;
+    top: clamp(0.75rem, 2vw, 1.5rem);
+    right: clamp(0.75rem, 2vw, 1.5rem);
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    color: var(--global-text-color);
+    font-size: 2rem;
+    line-height: 1;
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+    }
+  }
+}
+
+body.publication-lightbox-open {
+  overflow: hidden;
 }
 
 #toc-sidebar {
