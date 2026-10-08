@@ -160,7 +160,7 @@
       .attr("x", (cluster) => centers.get(cluster.id).x)
       .attr("y", (cluster) => {
         if (width < 640) return centers.get(cluster.id).y - 100;
-        if (cluster.id === "interpretable-ai") return height * 0.66;
+        if (cluster.id === "interpretable-ai") return height - 24;
         return centers.get(cluster.id).y - 170;
       })
       .text((cluster) => cluster.label);
@@ -275,7 +275,7 @@
 
           if (width >= 640) {
             if (node.cluster === "interpretable-ai") {
-              node.y = Math.max(height * 0.75, node.y);
+              node.y = Math.min(height * 0.84, Math.max(height * 0.75, node.y));
             } else {
               node.y = Math.min(height * 0.56, node.y);
             }
