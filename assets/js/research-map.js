@@ -55,6 +55,7 @@
       ["wearable-physiological-signals", { x: width * 0.19, y: height * 0.52 }],
       ["scientific-discovery", { x: width * 0.5, y: height * 0.48 }],
       ["clinical-ai", { x: width * 0.81, y: height * 0.52 }],
+      ["other", { x: width * 0.5, y: height * 0.82 }],
     ]);
   }
 
@@ -157,7 +158,7 @@
       .join("text")
       .attr("class", "research-map__cluster-label")
       .attr("x", (cluster) => centers.get(cluster.id).x)
-      .attr("y", (cluster) => centers.get(cluster.id).y - (width < 640 ? 100 : 170))
+      .attr("y", (cluster) => centers.get(cluster.id).y - (width < 640 ? 100 : cluster.id === "other" ? 75 : 170))
       .text((cluster) => cluster.label);
 
     linkSelection = rootLayer

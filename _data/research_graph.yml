@@ -8,6 +8,9 @@ clusters:
   - id: clinical-ai
     label: Clinical AI
     color: "#0ea5e9"
+  - id: other
+    label: Other
+    color: "#f97316"
 
 nodes:
   - id: protocdisco
@@ -157,7 +160,7 @@ nodes:
     title: It's LIT! LLMs with Interpretable Tools
     year: 2025
     venue: NeurIPS MTI-LLM Workshop
-    cluster: scientific-discovery
+    cluster: other
     preview: assets/img/publication_preview/lit_framework.png
     url: https://arxiv.org/abs/2511.14903
     summary: Pairs language models with interpretable tools for transparent multi-turn problem solving.
