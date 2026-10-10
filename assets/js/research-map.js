@@ -163,6 +163,7 @@
       .data(data.clusters)
       .join("text")
       .attr("class", "research-map__cluster-label")
+      .style("fill", (cluster) => cluster.color)
       .attr("x", (cluster) => centers.get(cluster.id).x)
       .attr("y", (cluster) => {
         if (width < 640) return centers.get(cluster.id).y - 100;
