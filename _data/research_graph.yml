@@ -173,6 +173,9 @@ links:
   - source: protocdisco
     target: mammotexture
     label: human-readable concepts
+  - source: protocdisco
+    target: dataset-shifts
+    label: interpretable dataset shifts
   - source: cosine
     target: rashomon
     label: prototype models
@@ -227,9 +230,6 @@ links:
   - source: data-hugging
     target: dataset-shifts
     label: model scrutiny
-  - source: data-hugging
-    target: rashomon
-    label: clinical model transparency
   - source: data-hugging
     target: learning-alarms
     label: wearable model evidence
