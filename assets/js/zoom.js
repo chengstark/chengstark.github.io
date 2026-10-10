@@ -2,13 +2,13 @@
 function initializeImageZoom() {
   if (typeof mediumZoom !== "function") return;
 
-  window.medium_zoom = mediumZoom("[data-zoomable]:not(.preview)", {
+  window.medium_zoom = mediumZoom("[data-zoomable]:not(.preview):not(.research-map__details-image)", {
     background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee",
     margin: 24,
     scrollOffset: 20,
   });
 
-  document.querySelectorAll("[data-zoomable]:not(.preview)").forEach((image) => {
+  document.querySelectorAll("[data-zoomable]:not(.preview):not(.research-map__details-image)").forEach((image) => {
     image.style.cursor = "zoom-in";
   });
 
@@ -19,14 +19,14 @@ function initializeImageZoom() {
     event.target.style.cursor = "zoom-in";
   });
 
-  const publicationImages = document.querySelectorAll(".publications .preview[data-zoomable]");
-  if (publicationImages.length === 0) return;
+  const previewImages = document.querySelectorAll(".publications .preview[data-zoomable], .research-map__details-image[data-zoomable]");
+  if (previewImages.length === 0) return;
 
   const lightbox = document.createElement("div");
   lightbox.className = "publication-image-lightbox";
   lightbox.setAttribute("role", "dialog");
   lightbox.setAttribute("aria-modal", "true");
-  lightbox.setAttribute("aria-label", "Enlarged publication image");
+  lightbox.setAttribute("aria-label", "Enlarged image preview");
   lightbox.setAttribute("aria-hidden", "true");
 
   const enlargedImage = document.createElement("img");
@@ -53,7 +53,7 @@ function initializeImageZoom() {
     triggerImage = null;
   }
 
-  publicationImages.forEach((image) => {
+  previewImages.forEach((image) => {
     image.style.cursor = "zoom-in";
     image.tabIndex = 0;
     image.setAttribute("role", "button");
