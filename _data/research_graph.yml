@@ -6,7 +6,7 @@ clusters:
     label: AI for Scientific Discovery
     color: "#8b5cf6"
   - id: clinical-ai
-    label: Interp AI methods
+    label: Interpretable AI
     color: "#0ea5e9"
 
 nodes:
