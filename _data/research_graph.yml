@@ -1,6 +1,6 @@
 clusters:
   - id: wearable-physiological-signals
-    label: Wearable physiological signals
+    label: Wearable cardiac monitoring
     color: "#10b981"
   - id: scientific-discovery
     label: Scientific discovery
