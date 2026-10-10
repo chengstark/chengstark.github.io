@@ -151,7 +151,7 @@
         .attr("height", 1)
         .attr("patternContentUnits", "objectBoundingBox");
 
-      pattern.append("image").attr("href", imageUrl(node.preview)).attr("width", 1).attr("height", 1).attr("preserveAspectRatio", "xMidYMid slice");
+      pattern.append("image").attr("href", imageUrl(node.preview)).attr("width", 1).attr("height", 1).attr("preserveAspectRatio", "none");
 
       node.radius = radius;
     });
@@ -214,12 +214,6 @@
       .attr("r", (node) => node.radius)
       .attr("fill", (node) => `url(#research-map-image-${node.id})`)
       .attr("stroke", (node) => clusterById.get(node.cluster).color);
-
-    nodeSelection
-      .filter((node) => node.featured)
-      .append("circle")
-      .attr("class", "research-map__featured-ring")
-      .attr("r", (node) => node.radius - 5);
 
     nodeSelection
       .append("text")

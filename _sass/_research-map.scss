@@ -181,13 +181,6 @@
     }
   }
 
-  &__featured-ring {
-    fill: none;
-    stroke: var(--global-card-bg-color);
-    stroke-width: 2;
-    pointer-events: none;
-  }
-
   &__node-label {
     fill: var(--global-text-color);
     stroke: var(--global-card-bg-color);
