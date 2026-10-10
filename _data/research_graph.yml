@@ -144,7 +144,7 @@ nodes:
     title: Data-Hugging Shields Proprietary AI Models from Research That Could Disprove Them
     year: 2026
     venue: npj Artificial Intelligence
-    cluster: clinical-ai
+    cluster: wearable-physiological-signals
     preview: assets/img/publication_preview/datahugging.png
     url: https://www.nature.com/articles/s44387-026-00094-2
     summary: Examines how restricted data access can shield proprietary AI systems from research that could challenge them.
