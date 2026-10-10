@@ -55,7 +55,6 @@
       ["wearable-physiological-signals", { x: width * 0.19, y: height * 0.52 }],
       ["scientific-discovery", { x: width * 0.5, y: height * 0.48 }],
       ["clinical-ai", { x: width * 0.81, y: height * 0.52 }],
-      ["interpretable-ai", { x: width * 0.5, y: height * 0.82 }],
     ]);
   }
 
@@ -167,7 +166,6 @@
       .attr("x", (cluster) => centers.get(cluster.id).x)
       .attr("y", (cluster) => {
         if (width < 640) return centers.get(cluster.id).y - 100;
-        if (cluster.id === "interpretable-ai") return height - 24;
         return centers.get(cluster.id).y - 170;
       })
       .text((cluster) => cluster.label);
@@ -280,13 +278,7 @@
         nodeSelection.attr("transform", (node) => {
           const padding = node.radius + 8;
 
-          if (width >= 640) {
-            if (node.cluster === "interpretable-ai") {
-              node.y = Math.min(height * 0.84, Math.max(height * 0.75, node.y));
-            } else {
-              node.y = Math.min(height * 0.56, node.y);
-            }
-          }
+          if (width >= 640) node.y = Math.min(height * 0.56, node.y);
 
           node.x = Math.max(padding, Math.min(width - padding, node.x));
           node.y = Math.max(padding, Math.min(height - padding - 18, node.y));

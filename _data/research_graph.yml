@@ -6,11 +6,8 @@ clusters:
     label: Scientific discovery
     color: "#8b5cf6"
   - id: clinical-ai
-    label: Clinical AI
+    label: Interpretable AI
     color: "#0ea5e9"
-  - id: interpretable-ai
-    label: Other interp AI methods
-    color: "#f97316"
 
 nodes:
   - id: protocdisco
@@ -29,7 +26,7 @@ nodes:
     title: Cosine Similarity Is Almost All You Need (for Prototypical-Part Models)
     year: 2026
     venue: WACV
-    cluster: interpretable-ai
+    cluster: clinical-ai
     preview: assets/img/publication_preview/cosine_similarity.png
     url: https://openaccess.thecvf.com/content/WACV2026/html/Moffett_Cosine_Similarity_is_Almost_All_You_Need_for_Prototypical-Part_Models_WACV_2026_paper.html
     summary: Studies a simpler similarity mechanism for prototypical-part models and their visual explanations.
@@ -154,7 +151,7 @@ nodes:
     title: It's LIT! LLMs with Interpretable Tools
     year: 2025
     venue: NeurIPS MTI-LLM Workshop
-    cluster: interpretable-ai
+    cluster: clinical-ai
     preview: assets/img/publication_preview/lit_framework.png
     url: https://arxiv.org/abs/2511.14903
     summary: Pairs language models with interpretable tools for transparent multi-turn problem solving.
