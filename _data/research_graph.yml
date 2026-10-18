@@ -160,7 +160,7 @@ nodes:
     summary: Pairs language models with interpretable tools for transparent multi-turn problem solving.
 
   - id: dataset-shifts
-    label: Dataset shifts
+    label: Dataset difference explanation
     title: '"What Is Different Between These Datasets?" A Framework for Explaining Data Distribution Shifts'
     year: 2025
     venue: Journal of Machine Learning Research
