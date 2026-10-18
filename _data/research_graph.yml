@@ -4,6 +4,9 @@ clusters:
     color: "#10b981"
   - id: scientific-discovery
     label: AI for Scientific Discovery and Clinical Decision Aid
+    label_lines:
+      - AI for Scientific Discovery
+      - and Clinical Decision Aid
     color: "#8b5cf6"
   - id: clinical-ai
     label: Interpretable AI
@@ -32,7 +35,7 @@ nodes:
     summary: Studies a simpler similarity mechanism for prototypical-part models and their visual explanations.
 
   - id: rashomon
-    label: Rashomon sets
+    label: ProtoRSet
     title: "Rashomon Sets for Prototypical-Part Networks: Editing Interpretable Models in Real-Time"
     year: 2025
     venue: CVPR
@@ -180,8 +183,17 @@ links:
     target: rashomon
     label: prototype models
   - source: cosine
-    target: lit
-    label: interpretable AI methods
+    target: dataset-shifts
+    label: interpretable model comparison
+  - source: cosine
+    target: eeg
+    label: prototype-based explanations
+  - source: cosine
+    target: protocdisco
+    label: prototype concepts
+  - source: cosine
+    target: mammotexture
+    label: visual concept similarity
   - source: mammotexture
     target: eeg
     label: clinical decision support

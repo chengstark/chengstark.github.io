@@ -169,7 +169,16 @@
         if (cluster.id === "clinical-ai") return height - 24;
         return centers.get(cluster.id).y - 170;
       })
-      .text((cluster) => cluster.label);
+      .each(function (cluster) {
+        const lines = cluster.label_lines || [cluster.label];
+        d3.select(this)
+          .selectAll("tspan")
+          .data(lines)
+          .join("tspan")
+          .attr("x", centers.get(cluster.id).x)
+          .attr("dy", (line, index) => (index === 0 ? 0 : "1.25em"))
+          .text((line) => line);
+      });
 
     linkSelection = rootLayer
       .append("g")
