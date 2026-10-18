@@ -3,7 +3,7 @@ clusters:
     label: Wearable cardiac monitoring
     color: "#10b981"
   - id: scientific-discovery
-    label: AI for Scientific Discovery
+    label: AI for Scientific Discovery and Clinical Decision Aid
     color: "#8b5cf6"
   - id: clinical-ai
     label: Interpretable AI
