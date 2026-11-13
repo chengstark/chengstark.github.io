@@ -97,18 +97,21 @@
 
     details.image.src = imageUrl(node.preview);
     details.image.alt = `Preview for ${node.title}`;
-    details.image.hidden = false;
+    const status = node.venue.toLowerCase();
+    const workInProgress = status.includes("ongoing research") || status.includes("in submission");
+    details.image.hidden = workInProgress;
     details.topic.textContent = cluster.label;
     details.topic.style.color = cluster.color;
     details.title.textContent = node.title;
     details.meta.textContent = `${node.venue} · ${node.year}${node.featured ? " · Selected publication" : ""}`;
-    details.summary.textContent = node.summary;
+    details.summary.textContent = workInProgress ? (node.abstract ? `Abstract: ${node.abstract}` : "") : node.summary;
+    details.summary.hidden = !details.summary.textContent;
     details.related.textContent = related.length ? `Connected to: ${related.join(", ")}.` : "";
-    details.related.hidden = !related.length;
-    details.link.hidden = !node.url;
-    details.progress.hidden = Boolean(node.url);
+    details.related.hidden = workInProgress || !related.length;
+    details.link.hidden = workInProgress || !node.url;
+    details.progress.hidden = !workInProgress;
 
-    if (node.url) details.link.href = node.url;
+    if (node.url && !workInProgress) details.link.href = node.url;
   }
 
   function selectNode(node) {
@@ -122,6 +125,7 @@
       details.title.textContent = "Select a paper";
       details.meta.textContent = "Drag nodes to rearrange them, or pan and zoom the canvas.";
       details.summary.textContent = "Connections represent shared methods, research questions, or application areas.";
+      details.summary.hidden = false;
       details.related.hidden = true;
       details.image.hidden = true;
       details.link.hidden = true;

@@ -8,9 +8,16 @@
     {% for paper in site.data.research_graph.nodes %}
       {% if paper.featured %}
         <li>
-          <a href="{{ '/publications/#' | append: paper.publication_key | relative_url }}">
+          {% assign paper_destination = '/publications/#' | append: paper.publication_key | relative_url %}
+          {% if paper.url %}
+            {% assign paper_destination = paper.url %}
+          {% endif %}
+          <a href="{{ paper_destination }}">
             <span>{{ paper.title }}</span>
-            <small>{{ paper.venue }}, {{ paper.year }}</small>
+            <small>
+              {{- paper.venue }}, {{ paper.year -}}
+              {%- unless paper.url %} · Work in progress{% endunless -%}
+            </small>
           </a>
         </li>
       {% endif %}

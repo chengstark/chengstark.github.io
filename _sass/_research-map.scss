@@ -1,4 +1,8 @@
 .research-map {
+  [hidden] {
+    display: none !important;
+  }
+
   margin: 1.5rem 0 3rem;
 
   &__intro {
@@ -234,7 +238,12 @@
   }
 
   &__details-copy {
+    grid-column: 1 / -1;
     align-self: center;
+  }
+
+  &__details-image:not([hidden]) + &__details-copy {
+    grid-column: auto;
   }
 
   &__details-topic,

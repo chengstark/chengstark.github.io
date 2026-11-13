@@ -809,6 +809,21 @@ footer.sticky-bottom {
   }
 
   ol.bibliography {
+    [id] {
+      scroll-margin-top: 6rem;
+    }
+
+    .publication-status {
+      margin-top: 0.5rem;
+      color: var(--global-text-color-light);
+      font-style: italic;
+    }
+
+    .publication-abstract summary {
+      color: var(--global-theme-color);
+      cursor: pointer;
+    }
+
     list-style: none;
     padding: 0;
     margin-top: 0;

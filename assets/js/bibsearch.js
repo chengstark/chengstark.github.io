@@ -1,8 +1,11 @@
 import { highlightSearchTerm } from "./highlight-search-term.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("bibsearch");
+  if (!searchInput) return;
   // actual bibsearch logic
   const filterItems = (searchTerm) => {
+    searchTerm = searchTerm.trim().toLowerCase();
     document.querySelectorAll(".bibliography, .unloaded").forEach((element) => element.classList.remove("unloaded"));
 
     // highlight-search-term
@@ -51,17 +54,32 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const updateInputField = () => {
-    const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
-    document.getElementById("bibsearch").value = hashValue;
-    filterItems(hashValue);
+    let hashValue;
+    try {
+      hashValue = decodeURIComponent(window.location.hash.substring(1));
+    } catch {
+      hashValue = window.location.hash.substring(1);
+    }
+    const target = document.getElementById(hashValue);
+    const isPublication = target && target.closest(".bibliography > li");
+
+    // Citation anchors navigate to an entry; other hashes retain shareable search.
+    searchInput.value = isPublication ? "" : hashValue;
+    filterItems(searchInput.value);
+
+    if (isPublication) {
+      const abstract = target.querySelector("details.publication-abstract");
+      if (abstract) abstract.open = true;
+      requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+    }
   };
 
   // Sensitive search. Only start searching if there's been no input for 300 ms
   let timeoutId;
-  document.getElementById("bibsearch").addEventListener("input", function () {
+  searchInput.addEventListener("input", function () {
     clearTimeout(timeoutId); // Clear the previous timeout
     const searchTerm = this.value.toLowerCase();
-    timeoutId = setTimeout(filterItems(searchTerm), 300);
+    timeoutId = setTimeout(() => filterItems(searchTerm), 300);
   });
 
   window.addEventListener("hashchange", updateInputField); // Update the filter when the hash changes
