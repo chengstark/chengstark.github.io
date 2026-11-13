@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let hashValue;
     try {
       hashValue = decodeURIComponent(window.location.hash.substring(1));
-    } catch {
+    } catch (error) {
       hashValue = window.location.hash.substring(1);
     }
     const target = document.getElementById(hashValue);
