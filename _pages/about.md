@@ -18,9 +18,9 @@ I’m a postdoctoral researcher at Duke University working with Professor [Cynth
 
 I develop **interpretable machine learning methods** for scientific discovery and clinical decision making, with a focus on **foundation models and unsupervised concept discovery**. My goal is to turn complex learned representations into reusable, human-understandable concepts that help experts uncover meaningful knowledge in data.
 
-My most recent method, **ProtoCDisco**, is an unsupervised framework that discovers faithful concepts from foundation models without human annotations, enabling domain experts to examine and build on model-derived insights. I am also working with radiologists to develop an **interpretable lexicon of mammographic textures** for breast cancer risk prediction.
+My recent work focuses on **unsupervised concept discovery from foundation models**: identifying reusable, human-understandable concepts in learned representations without manual concept annotations. I aim to connect the expressive power of foundation models with domain knowledge, enabling experts to examine model reasoning and uncover meaningful patterns in complex data.
 
-In critical-care neurology, I developed ProtoPMed-EEG, a case-based deep network that provided the first data-driven support for the ictal-interictal-injury continuum (IIIC). With its assistance, medical professionals’ EEG classification accuracy increased from **47% to 71%** in a [user study](https://doi.org/10.1056/AIoa2300331). In wearable heart monitoring, I introduced SiamAF, which learns shared physiological representations across ECG and PPG signals for atrial fibrillation detection across sensor types and clinical settings.
+More broadly, my work spans **interpretable deep learning, multimodal representation learning, and human–AI collaboration**, with applications in medical imaging and physiological monitoring. I have developed methods that uncover shared structure across sensing modalities, reveal clinically meaningful relationships in data, and support expert decision making. In a [user study](https://doi.org/10.1056/AIoa2300331), my interpretable EEG model improved medical professionals’ classification accuracy from **47% to 71%**.
 
 My work has appeared in *NEJM AI*, *Nature Machine Intelligence*, *JMLR*, *CVPR*, and *Harvard Data Science Review*.
 
