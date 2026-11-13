@@ -16,9 +16,13 @@ social: true # includes social icons at the bottom of the page
 
 I’m a postdoctoral researcher at Duke University working with Professor [Cynthia Rudin](https://users.cs.duke.edu/~cynthia/). I received my Ph.D. in Electrical and Computer Engineering from Duke in 2026 and my B.Sc. in Computer Science from Rensselaer Polytechnic Institute.
 
-My research develops machine learning methods that turn the rich representations learned by foundation models into general, reusable, and human-understandable concepts for scientific discovery, prediction, and expert reasoning. This work lies at the intersection of scientific discovery, foundation models, and interpretable machine learning.
+I develop **interpretable machine learning methods** for scientific discovery and clinical decision making, with a focus on **foundation models and unsupervised concept discovery**. My goal is to turn complex learned representations into reusable, human-understandable concepts that help experts uncover meaningful knowledge in data.
 
-Currently, I am developing unsupervised concept-discovery methods and an interpretable lexicon of mammographic textures for breast cancer risk prediction. Across critical-care EEG and wearable cardiac monitoring, my work has provided the first data-driven support for the ictal-interictal-injury continuum (IIIC) and uncovered a shared manifold across ECG and PPG signals that improves atrial fibrillation detection. My work has appeared in NEJM AI, Nature Machine Intelligence, JMLR, CVPR, and Harvard Data Science Review.
+My most recent method, **ProtoCDisco**, is an unsupervised framework that discovers faithful concepts from foundation models without human annotations, enabling domain experts to examine and build on model-derived insights. I am also working with radiologists to develop an **interpretable lexicon of mammographic textures** for breast cancer risk prediction.
+
+In critical-care neurology, I developed ProtoPMed-EEG, a case-based deep network that provided the first data-driven support for the ictal-interictal-injury continuum (IIIC). With its assistance, medical professionals’ EEG classification accuracy increased from **47% to 71%** in a [user study](https://doi.org/10.1056/AIoa2300331). In wearable heart monitoring, I introduced SiamAF, which learns shared physiological representations across ECG and PPG signals for atrial fibrillation detection across sensor types and clinical settings.
+
+My work has appeared in *NEJM AI*, *Nature Machine Intelligence*, *JMLR*, *CVPR*, and *Harvard Data Science Review*.
 
 <!-- Prior to joining Duke, I received my Bachelor’s degree in Computer Science from Rensselaer Polytechnic Institute. -->
 
