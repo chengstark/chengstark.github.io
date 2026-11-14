@@ -210,12 +210,6 @@
       {% if entry_status contains 'ongoing research' %}
         <p class="publication-status">Work in progress.</p>
       {% endif %}
-      {% if entry.abstract and entry.abstract != blank %}
-        <details class="publication-abstract">
-          <summary>Abstract</summary>
-          <p>{{ entry.abstract }}</p>
-        </details>
-      {% endif %}
     {% else %}
       <!-- Links/Buttons -->
       <div class="links">
@@ -223,9 +217,6 @@
           <a class="award btn btn-sm z-depth-0" role="button">
             {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
           </a>
-        {% endif %}
-        {% if entry.abstract %}
-          <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
         {% endif %}
         {% if entry.bibtex_show %}
           <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
@@ -372,13 +363,6 @@
         </div>
       {% endif %}
 
-      {% if entry.abstract %}
-        <!-- Hidden abstract block -->
-        <div class="abstract hidden">
-          <p>{{ entry.abstract }}</p>
-        </div>
-      {% endif %}
-
       {% if entry.bibtex_show %}
         <!-- Hidden bibtex block -->
         <div class="bibtex hidden">
@@ -394,6 +378,12 @@
           <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
         </div>
       {% endif %}
+    {% endif %}
+    {% if entry.abstract and entry.abstract != blank %}
+      <details class="publication-abstract">
+        <summary>Abstract</summary>
+        <p>{{ entry.abstract | escape }}</p>
+      </details>
     {% endif %}
   </div>
 </div>
