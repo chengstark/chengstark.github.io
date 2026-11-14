@@ -117,32 +117,6 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-          <li class="nav-item dropdown">
-            <button
-              class="nav-link dropdown-toggle dev-menu-button"
-              id="dev-menu-toggle"
-              type="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              aria-controls="dev-settings-menu"
-              title="Developer controls"
-            >
-              Dev
-            </button>
-            <div class="dropdown-menu dropdown-menu-right dev-menu" id="dev-settings-menu" aria-labelledby="dev-menu-toggle">
-              <div class="custom-control custom-switch">
-                <input class="custom-control-input" type="checkbox" role="switch" id="dev-mode-toggle" aria-controls="dev-options">
-                <label class="custom-control-label" for="dev-mode-toggle">Developer mode</label>
-              </div>
-              <div class="dev-menu__options" id="dev-options" hidden>
-                <div class="custom-control custom-switch">
-                  <input class="custom-control-input" type="checkbox" role="switch" id="dev-cursor-toggle" disabled>
-                  <label class="custom-control-label" for="dev-cursor-toggle">Show mouse arrow</label>
-                </div>
-              </div>
-            </div>
-          </li>
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
