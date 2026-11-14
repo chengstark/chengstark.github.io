@@ -314,6 +314,45 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Developer controls
+
+html.dev-cursor-hidden,
+html.dev-cursor-hidden *,
+html.dev-cursor-hidden *::before,
+html.dev-cursor-hidden *::after {
+  cursor: none !important;
+}
+
+.dev-menu-button {
+  border: 0;
+  background: transparent;
+  font: inherit;
+}
+
+.dev-menu {
+  min-width: 14rem;
+  padding: 0.8rem 1rem;
+  color: var(--global-text-color);
+  text-align: left;
+
+  .custom-control-label {
+    cursor: pointer;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: var(--global-theme-color);
+    background-color: var(--global-theme-color);
+  }
+
+  &__options {
+    margin-top: 0.8rem;
+
+    &[hidden] {
+      display: none !important;
+    }
+  }
+}
+
 // Navbar customization
 
 .navbar {
