@@ -16,7 +16,7 @@
             <span>{{ paper.title }}</span>
             <small>
               {{- paper.venue }}, {{ paper.year -}}
-              {%- unless paper.url %} · Work in progress{% endunless -%}
+              {%- if paper.venue == 'Ongoing research' %} · Work in progress{% endif -%}
             </small>
           </a>
         </li>

@@ -98,24 +98,25 @@
     details.image.src = imageUrl(node.preview);
     details.image.alt = `Preview for ${node.title}`;
     const status = node.venue.toLowerCase();
-    const workInProgress = status.includes("ongoing research") || status.includes("in submission");
+    const workInProgress = status.includes("ongoing research");
+    const unpublished = workInProgress || status.includes("in submission");
     details.image.hidden = !node.preview;
     details.topic.textContent = cluster.label;
     details.topic.style.color = cluster.color;
     details.title.textContent = node.title;
     details.meta.textContent = `${node.venue} · ${node.year}${node.featured ? " · Selected publication" : ""}`;
-    details.summary.textContent = workInProgress ? (node.abstract ? `Abstract: ${node.abstract}` : "") : node.summary;
+    details.summary.textContent = unpublished ? (node.abstract ? `Abstract: ${node.abstract}` : "") : node.summary;
     details.summary.hidden = !details.summary.textContent;
     details.related.textContent = related.length ? `Connected to: ${related.join(", ")}.` : "";
-    details.related.hidden = workInProgress || !related.length;
-    details.link.hidden = workInProgress ? !node.abstract_url : !node.url;
+    details.related.hidden = unpublished || !related.length;
+    details.link.hidden = unpublished ? !node.abstract_url : !node.url;
     details.progress.hidden = !workInProgress;
 
-    if (workInProgress && node.abstract_url) {
+    if (unpublished && node.abstract_url) {
       details.link.href = `${baseUrl}${node.abstract_url}`;
       details.link.textContent = "View abstract";
       details.link.target = "_self";
-    } else if (node.url && !workInProgress) {
+    } else if (node.url && !unpublished) {
       details.link.href = node.url;
       details.link.textContent = "Read paper ↗";
       details.link.target = "_blank";

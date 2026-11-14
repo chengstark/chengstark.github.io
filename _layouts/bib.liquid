@@ -1,9 +1,9 @@
 ---
 ---
 {% assign entry_status = entry.journal | downcase %}
-{% assign entry_is_work_in_progress = false %}
+{% assign entry_is_unpublished = false %}
 {% if entry_status contains 'ongoing research' or entry_status contains 'in submission' %}
-  {% assign entry_is_work_in_progress = true %}
+  {% assign entry_is_unpublished = true %}
 {% endif %}
 <div class="row">
   {% if site.enable_publication_thumbnails %}
@@ -52,7 +52,7 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     {% assign paper_url = null %}
-    {% unless entry_is_work_in_progress %}
+    {% unless entry_is_unpublished %}
       {% if entry.url %}
         {% assign paper_url = entry.url %}
       {% elsif entry.doi %}
@@ -206,8 +206,10 @@
       {{ entry.note | strip }}
     </div>
 
-    {% if entry_is_work_in_progress %}
-      <p class="publication-status">Work in progress.</p>
+    {% if entry_is_unpublished %}
+      {% if entry_status contains 'ongoing research' %}
+        <p class="publication-status">Work in progress.</p>
+      {% endif %}
       {% if entry.abstract and entry.abstract != blank %}
         <details class="publication-abstract">
           <summary>Abstract</summary>
