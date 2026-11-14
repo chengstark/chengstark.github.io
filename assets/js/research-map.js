@@ -99,7 +99,7 @@
     details.image.alt = `Preview for ${node.title}`;
     const status = node.venue.toLowerCase();
     const workInProgress = status.includes("ongoing research") || status.includes("in submission");
-    details.image.hidden = workInProgress;
+    details.image.hidden = !node.preview;
     details.topic.textContent = cluster.label;
     details.topic.style.color = cluster.color;
     details.title.textContent = node.title;
@@ -108,10 +108,18 @@
     details.summary.hidden = !details.summary.textContent;
     details.related.textContent = related.length ? `Connected to: ${related.join(", ")}.` : "";
     details.related.hidden = workInProgress || !related.length;
-    details.link.hidden = workInProgress || !node.url;
+    details.link.hidden = workInProgress ? !node.abstract_url : !node.url;
     details.progress.hidden = !workInProgress;
 
-    if (node.url && !workInProgress) details.link.href = node.url;
+    if (workInProgress && node.abstract_url) {
+      details.link.href = `${baseUrl}${node.abstract_url}`;
+      details.link.textContent = "View abstract";
+      details.link.target = "_self";
+    } else if (node.url && !workInProgress) {
+      details.link.href = node.url;
+      details.link.textContent = "Read paper ↗";
+      details.link.target = "_blank";
+    }
   }
 
   function selectNode(node) {

@@ -6,7 +6,7 @@
   {% assign entry_is_work_in_progress = true %}
 {% endif %}
 <div class="row">
-  {% if site.enable_publication_thumbnails and entry_is_work_in_progress == false %}
+  {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}

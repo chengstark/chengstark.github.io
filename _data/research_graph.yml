@@ -22,6 +22,7 @@ nodes:
     preview: assets/img/publication_preview/protocdisco.png
     featured: true
     publication_key: guo2026protocdisco
+    abstract_url: /publications/#guo2026protocdisco
     summary: Discovers human-readable visual concepts from foundation-model representations without concept labels.
 
   - id: cosine
@@ -50,7 +51,7 @@ nodes:
     year: 2026
     venue: Ongoing research
     cluster: scientific-discovery
-    preview: assets/img/publication_preview/mammographic_texture_lexicon.png
+    preview: assets/img/publication_preview/mammography_texture_lexicon.png
     featured: true
     publication_key: guo2026mammotexture
     summary: Builds a radiologist-facing vocabulary of mammographic texture concepts for interpretable breast cancer risk prediction.
