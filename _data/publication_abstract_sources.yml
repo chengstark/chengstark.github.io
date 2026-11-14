@@ -1,6 +1,12 @@
 # Sources for abstracts added to _bibliography/papers.bib.
-# Text is preserved apart from whitespace, section labels, and display notation.
+# Text is preserved apart from whitespace, section labels, display notation,
+# and the explicit formatting corrections recorded below.
 retrieved_on: "2026-11-13"
+verified_on: "2026-11-14"
+
+formatting_corrections:
+  guo2021supervised: "Inserted a missing space before the Significance section heading."
+  barnett2024improving: "Removed a duplicate period after the parenthesized funding note."
 
 sources:
   karpurapu2026datahugging:
