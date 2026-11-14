@@ -13,7 +13,7 @@
   }
 
   const applyCursor = () => {
-    root.classList.toggle("dev-cursor-hidden", enabled && !showMouseArrow);
+    root.classList.toggle("dev-cursor-hidden", !showMouseArrow);
   };
 
   // Apply the saved choice before the page is displayed.
